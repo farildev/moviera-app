@@ -1,0 +1,21 @@
+.header{
+    background-color: #512bd4;
+    padding: 1rem 0;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navList{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            .navItem{
+                margin: 0 10px;
+                .navLink{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
