@@ -1,6 +1,5 @@
 const initState = {
     products : [
-        [
             {
               id: 1,
               title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -240,11 +239,10 @@ const initState = {
                 rate: 3.6,
                 count: 145
               }
-            }
-          ]
-    ],
+            },
+],
     basket : []
-};
+};  
   export default function reducer(state = initState , action){
       switch (action.type) {
           case "ADD" : 
@@ -254,6 +252,11 @@ const initState = {
               ...state.basket , state.products.find((e) => e.id === action.payload)
             ]
           };
+          case "DEL" : 
+          return{
+            ...state,
+            basket : state.basket.filter((e) => e.id !== action.payload)
+          }
           default : 
           return state;
       }

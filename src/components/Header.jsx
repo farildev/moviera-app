@@ -5,7 +5,7 @@ function Header() {
   return (
       <header className='navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center text-dark'>
         <nav className="container py-3">
-        <a className="navbar-brand" href="#">Navbar</a>
+        <Link className="navbar-brand" to={'/'}>Navbar</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -32,10 +32,12 @@ function Header() {
               <NavLink className="nav-link disabled" href="#">Disabled</NavLink>
             </li>
           </ul>
-          <form className="form-inline my-2 my-lg-0 d-flex align-items-center justify-content-center">
+          <form className="form-inline my-2 my-lg-0 d-flex col-6 align-items-center justify-content-center">
             <input className="form-control mx-2 bg-dark text-white" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-outline-primary text-primary my-2 my-sm-0" type="submit">Search</button>
           </form>
+          <div className='bg-light p-2 '>
+            <Link to={'/basket'}>Basket</Link>
+          </div>
         </div>
       </nav>
       </header>
