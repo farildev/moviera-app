@@ -1,14 +1,25 @@
 import React from 'react';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
+import Card from '../../components/Card/Card';
+import { useSelector , useDispatch } from 'react-redux';
 
 function Home() {
-  const {toggle} = useSelector((state) => state)
-  console.log(toggle);
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  const basket = useSelector((state) => state.basket);
+  console.log(basket);
   return (
-    <div className='container'>
-      Home
+    <div className='container py-4'>
+      <div className="row">
+        {
+          products.map((product , key) => (
+            <div className="col-4" key={key}>
+              <Card detail={product}/>
+            </div>
+          ))
+        }
+      </div>
     </div>
   )
 }
 
-export default Home
+export default Home;
