@@ -6,6 +6,10 @@ function Home() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
   const basket = useSelector((state) => state.basket);
+
+  const searchProd = (id) => {
+    dispatch({ type : "SEARCH" , payload : id })
+  }
   return (
     <div className='container py-4'>
       <div className="row">

@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink , Link } from 'react-router-dom';
 
-function Header() {
+function Header({detail}) {
+  
   return (
       <header className='navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center text-dark'>
         <nav className="container py-3">

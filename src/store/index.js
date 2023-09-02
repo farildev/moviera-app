@@ -257,6 +257,11 @@ const initState = {
             ...state,
             basket : state.basket.filter((e) => e.id !== action.payload)
           }
+          case "SEARCH" :
+            return{
+              ...state,
+              products: state.products.filter((e) => e.id === action.payload)
+            }
           default : 
           return state;
       }
