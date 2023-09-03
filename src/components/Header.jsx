@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink , Link } from 'react-router-dom';
 
-function Header({detail}) {
+function Header() {
   
   return (
       <header className='navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center text-dark'>
@@ -17,20 +17,6 @@ function Header({detail}) {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to={'/products'}>Products</NavLink>
-            </li>
-            <li className="nav-item dropdown">
-              <NavLink className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </NavLink>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" href="#">Action</Link>
-                <Link className="dropdown-item" href="#">Another action</Link>
-                <div className="dropdown-divider"></div>
-                <Link className="dropdown-item" href="#">Something else here</Link>
-              </div>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link disabled" href="#">Disabled</NavLink>
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0 d-flex col-6 align-items-center justify-content-center">
